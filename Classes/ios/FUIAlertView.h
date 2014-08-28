@@ -26,7 +26,7 @@ typedef NS_ENUM(NSInteger, FUIAlertViewStyle) {
   cancelButtonTitle:(NSString *)cancelButtonTitle
   otherButtonTitles:(NSString *)otherButtonTitles, ... NS_REQUIRES_NIL_TERMINATION;
 
-@property(nonatomic,assign) id<FUIAlertViewDelegate> delegate;    // weak reference
+@property(nonatomic,strong) id<FUIAlertViewDelegate> delegate;    // weak reference
 
 @property (nonatomic, copy) void(^onOkAction)(void); //called if dismissed with other button
 @property (nonatomic, copy) void(^onCancelAction)(void);//called if dismissed with cancel button
